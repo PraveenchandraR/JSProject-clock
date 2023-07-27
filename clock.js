@@ -90,6 +90,7 @@ setInterval(changeCurrentTimeMessage, 1000);
         if (hours === parseInt(dropdowntext.value)) {
             
             img.src = 'window.png';
+            img.style.backgroundSize = "cover";
             let second = document.getElementById("second");
             second.innerText = "LETS HAVE SOME LUNCH";
         }
