@@ -4,8 +4,7 @@ body {
 .body {
   border: 1px;
   width: 100%;
-
-  height: fit-content;
+  position: relative;
 
   display: flex;
 }
@@ -15,10 +14,12 @@ body {
   width: 650px;
 }
 .main {
-  margin: 30px;
-  border: 1px black;
-  width: 650px;
-  height: fit-content;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-evenly;
 }
 .box1 {
   border: 1px brown;
@@ -92,10 +93,13 @@ body {
 }
 #rigth {
   margin: 10px;
-  margin: 30px;
-  border: 1px black;
-  width: 650px;
-  height: fit-content;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: center;
+  align-items: center;
 }
 .first {
   border: 1px;
@@ -159,9 +163,9 @@ button:hover {
 .index1 {
   border: 1px solid black;
   position: absolute;
-  height: 60px;
+  height: 100px;
   width: 500px;
-  top: 90px;
+  top: 60px;
   z-index: -1;
   background-color: aliceblue;
   border-radius: 10px;
@@ -169,15 +173,14 @@ button:hover {
 .index2 {
   border: 1px solid black;
   position: absolute;
-  height: 60px;
+  height: 110px;
   width: 490px;
-  top: 100px;
+  top: 65px;
   z-index: -2;
   background-color: rgb(105, 108, 191);
   border-radius: 10px;
 }
 #second {
-  margin-top: 70px;
   border: 1px;
   width: 650px;
   height: 70px;
@@ -193,10 +196,8 @@ button:hover {
   padding-top: 30px;
 }
 .third {
-  margin-top: 70px;
   border: 1px solid;
-  width: 650px;
-  height: 400px;
+
   border-radius: 10px;
   background-color: white;
 }
@@ -207,25 +208,28 @@ button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
   }
   .clock {
     align-items: center;
-
+    position: inherit;
+    width: 100%;
     display: flex;
     justify-content: center;
   }
 
   .main {
+    width: 100%;
     position: relative;
     width: fit-content;
   }
   .box1 {
-    margin-left: 100px;
+    width: 100%;
     width: 400px;
+    position: relative;
   }
   .box2 {
-    width: max-content;
-    margin-left: 50px;
+    position: relative;
   }
   .right {
     display: flex;
@@ -246,7 +250,7 @@ button:hover {
     top: 60px;
   }
   #second {
-    width: 500px;
+    width: 100%;
   }
   .third {
     width: 400px;

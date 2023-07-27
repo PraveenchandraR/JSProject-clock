@@ -70,11 +70,15 @@ setInterval(changeCurrentTimeMessage, 1000);
         let dropdown2Value = document.getElementById("dropdown1");
         let dropdown3Value = document.getElementById("dropdown2");
         let dropdown4Value = document.getElementById("dropdown3");
+
+        console.log(dropdowntext.value);
           //--first we will get the values of alarm options to the below box--- 
         let wake = document.getElementById("wish");
         wake.innerHTML = dropdowntext.options[dropdowntext.selectedIndex].text;
         let lunch = document.getElementById("wish2");
         lunch.innerHTML = dropdown2Value.options[dropdown2Value.selectedIndex].text;
+        console.log("lunch.innerhtml", lunch.innerHTML);
+        
         let naptime = document.getElementById("wish3");
         naptime.innerHTML = dropdown3Value.options[dropdown3Value.selectedIndex].text;
         let night = document.getElementById("wish4");
@@ -84,12 +88,13 @@ setInterval(changeCurrentTimeMessage, 1000);
        
 
         if (hours === parseInt(dropdowntext.value)) {
-               
+            
             img.src = 'window.png';
             let second = document.getElementById("second");
             second.innerText = "LETS HAVE SOME LUNCH";
         }
         else if (hours === parseInt(dropdown2Value.value)) {
+            console.log("parseint of lunch dropdown.value", parseInt(dropdown2Value.value))
             img.src = 'party.png';
             let second = document.getElementById("second");
             second.innerText = "LETS HAVE SOME LUNCH";
